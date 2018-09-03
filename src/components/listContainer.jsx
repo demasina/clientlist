@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { setExtendedViewAct } from '../actions/actions';
+import { setExtendedViewAction } from '../actions/actions';
 import ClientList from './clientList';
 
 class ListContainer extends Component {
@@ -46,7 +46,7 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = (dispatch) => {
-    return {setExtendedView: (client) => dispatch(setExtendedViewAct(client))}
+    return {setExtendedView: (client) => dispatch(setExtendedViewAction(client))}
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(ListContainer);

@@ -1,17 +1,22 @@
-export const setExtendedViewAct = (client) => ({
+export const setExtendedViewAction = (client) => ({
     type: 'SET_EXTENDED_VIEW',
     payload: client
 });
 
-export const uploadClientsAct = (clientsData) => ({
+export const uploadClientsAction = (clientsData) => ({
     type: 'UPLOAD_CLIENTS',
     payload: clientsData
+});
+
+export const searchAction = (string) => ({
+    type: 'SEARCH',
+    payload: string
 });
 
 export const uploadClients = () => dispatch => {
     fetch('clients.json')
         .then((response) => response.json())
-        .then((clients) => {dispatch(uploadClientsAct(clients));})
+        .then((clients) => {dispatch(uploadClientsAction(clients));})
 };
 
 

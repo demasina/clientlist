@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { setExtendedViewAct } from '../actions/actions';
+import { setExtendedViewAction } from '../actions/actions';
 import { List, Image } from 'semantic-ui-react';
 
 const Item = ({client, setExtendedView}) => {
@@ -16,7 +16,7 @@ const Item = ({client, setExtendedView}) => {
 };
 
 const mapDispatchToProps = (dispatch) => {
-    return {setExtendedView: (client) => dispatch(setExtendedViewAct(client))}
+    return {setExtendedView: (client) => dispatch(setExtendedViewAction(client))}
 };
 
 export default connect(null, mapDispatchToProps)(Item);

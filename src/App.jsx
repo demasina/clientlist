@@ -5,7 +5,8 @@ import { Header, Grid } from 'semantic-ui-react';
 import thunk from 'redux-thunk';
 import rootReducer from './reducer/reducers';
 import { uploadClients } from './actions/actions';
-import List from './components/clientsListContainer';
+import List from './components/listContainer';
+import Details from './components/detail';
 
 const store = createStore(rootReducer, applyMiddleware(thunk));
 
@@ -20,11 +21,15 @@ componentDidMount() {
             <Provider store={store}>
                 <React.Fragment>
                       <Header as="h1" content="Client List" textAlign='center' />
-                  <Grid columns={12} centered>
-                    <Grid.Column width={4}>
+                  <Grid columns={2} centered>
+                    <Grid.Column width={3}>
                       <List />
+                      
                     </Grid.Column>
-
+                    
+                    <Grid.Column width={7}>
+                        <Details />
+                    </Grid.Column>
                   </Grid>
                 </React.Fragment>
             </Provider>

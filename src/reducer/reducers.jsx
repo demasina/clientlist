@@ -1,7 +1,6 @@
 import { combineReducers } from 'redux';
 
-const clientsData = [
-];
+const clientsData = [];
 
 const clientsReducer = (state = clientsData, action) => {
     if (action.type === 'UPLOAD_CLIENTS') {
@@ -17,11 +16,17 @@ const extendedViewReducer = (state = null, action) => {
     return state;
 };
 
-
+const searchReducer = (state = '', action) => {
+    if (action.type === 'SEARCH') {
+        return action.payload;
+    }
+    return state;
+};
 
 const rootReducer = combineReducers({
     clientsState: clientsReducer,
     extendedViewState: extendedViewReducer,
+    searchState: searchReducer
 });
 
 export default rootReducer;
