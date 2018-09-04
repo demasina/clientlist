@@ -16,12 +16,6 @@ const extendedViewReducer = (state = null, action) => {
     return state;
 };
 
-const searchReducer = (state = '', action) => {
-    if (action.type === 'SEARCH') {
-        return action.payload;
-    }
-    return state;
-};
 
 const rootReducer = combineReducers({
     clientsState: clientsReducer,
