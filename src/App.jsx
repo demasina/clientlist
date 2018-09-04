@@ -7,6 +7,7 @@ import rootReducer from './reducer/reducers';
 import { uploadClients } from './actions/actions';
 import List from './components/listContainer';
 import Details from './components/detail';
+import Search from './components/search';
 
 const store = createStore(rootReducer, applyMiddleware(thunk));
 
@@ -21,6 +22,7 @@ componentDidMount() {
             <Provider store={store}>
                 <React.Fragment>
                       <Header as="h1" content="Client List" textAlign='center' />
+                      <Search />
                   <Grid columns={2} centered>
                     <Grid.Column width={3}>
                       <List />

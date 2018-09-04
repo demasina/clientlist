@@ -8,11 +8,11 @@ const Details = ({client}) => {
     }
 
     return (
-        <Grid columns={2} >
+        <Grid columns={2}>
             <Grid.Column width={4}>
                 <Image circular size="medium" src={client.general.avatar} alt=""/>
             </Grid.Column>
-            <Grid.Column width={12} >
+            <Grid.Column width={12}>
                 <Item>
                     <Item.Header as="h2">{client.general.firstName + ' ' + client.general.lastName}</Item.Header>
                     <Item.Meta as="h4">{client.job.title + ' - ' + client.job.company}</Item.Meta>
