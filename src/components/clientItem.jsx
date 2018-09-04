@@ -7,7 +7,7 @@ const Item = ({client, setExtendedView}) => {
     return (
         <List.Item onClick={() => {setExtendedView(client)}}>
             <Image avatar size="tiny" src={client.general.avatar} alt=""/>
-                <List.Content>
+                <List.Content >
                     <List.Header>{client.general.firstName + ' ' + client.general.lastName}</List.Header>
                     <List.Description>{client.job.title}</List.Description>
                 </List.Content>

@@ -8,12 +8,13 @@ const Search = ({search}) => {
     return (
         <Grid centered>
             <Grid.Row>
-                <input
+                <Input
+                    color="blue"
                     size="big"
                     icon="search"
                     type="text"
                     placeholder="Search client"
-                    onChange={(event) => search(event.target.value.toLowerCase())}
+                    onChange={(e) => search(e.target.value.toLowerCase())}
                 />
             </Grid.Row>
         </Grid>

@@ -10,7 +10,7 @@ const clientList = ({clients}) => {
 
     return (
         <div>
-            <List divided>
+            <List selection divided>
                 {clientsList}
                 
             </List>

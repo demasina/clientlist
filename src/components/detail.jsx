@@ -1,13 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Header, Item, Image, Grid, Divider } from 'semantic-ui-react';
+import { Header, Item, Image, Grid, Divider, Segment } from 'semantic-ui-react';
 
 const Details = ({client}) => {
     if (!client) {
-        return <Header>Nothing found</Header>
+        return <Header>Not found</Header>
     }
 
     return (
+        <Segment>
         <Grid columns={2}>
             <Grid.Column width={4}>
                 <Image circular size="medium" src={client.general.avatar} alt=""/>
@@ -35,6 +36,7 @@ const Details = ({client}) => {
             </Grid.Column>
 
         </Grid>
+        </Segment>
     );
 };
 
